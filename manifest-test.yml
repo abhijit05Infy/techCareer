@@ -1,0 +1,5 @@
+applications:
+- name: mercedes-benzcareers-test
+  path: target/techcareer-0.0.1-SNAPSHOT.war
+  memory: 6G
+  host: mercedes-benzcareers-test
