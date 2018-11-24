@@ -1,0 +1,86 @@
+<div class="modal-dialog sm">
+	<div class="modal-content">
+		<div class="modal-header"
+			style="background-color: black; color: white;">
+			<button type="button" class="close" (click)="close()">&times;</button>
+			<h4 class="modal-title">Contact Us</h4>
+		</div>
+		<div class="modal-body">
+
+			<h1>We want to hear from you !</h1>
+			<form [formGroup]="contactUsForm" novalidate>
+				<div class="form-group">
+					<label>Name*</label> <input type="text" class="form-control"
+						id="name" formControlName="name" placeholder="Enter your name">
+					<span class="text-danger"
+						*ngIf="contactUsForm.get('name').hasError('required') && contactUsForm.get('name').touched">
+						Please enter your name </span>
+				</div>
+				<div class="form-group">
+					<label>Email Address*</label> <input type="email"
+						class="form-control" formControlName="email" id="inputEmail"
+						aria-describedby="emailHelp" placeholder="Enter email"> <span
+						class="text-danger"
+						*ngIf="contactUsForm.get('email').hasError('required') && contactUsForm.get('email').touched">
+						Email address is mandatory </span> <span class="text-danger"
+						*ngIf="contactUsForm.get('email').errors?.pattern"> Email
+						format is invalid </span>
+
+				</div>
+				<div class="form-group">
+					<label>Phone*</label> <input type="text" class="form-control"
+						id="phno" formControlName="phoneNumber" minlength="14"
+						maxlength="14" placeholder="Enter phone number" phone> <span
+						class="text-danger"
+						*ngIf="contactUsForm.get('phoneNumber').hasError('required') && contactUsForm.get('phoneNumber').touched">
+						Please enter valid phone number </span>
+				</div>
+				<!-- <div class="form-group">
+            <label>State*</label>
+            <input class="form-control" ng2-auto-complete formControlName="state" [source]="states"
+            select-value-of="value" max-num-list=5 value-formatter="value" list-formatter="value" placeholder="Type state name if not found in options"/>
+
+            <span class="text-danger" *ngIf="contactUsForm.get('state').hasError('required') && contactUsForm.get('state').touched">
+               Select state
+              </span>
+          </div> -->
+				<div class="form-group">
+					<label>State*</label>
+					<div>
+						<ng-select [options]="states" [multiple]="false"
+							placeholder="Select State"
+							[allowClear]="false" (opened)="opened()"
+							(closed)="closed()" (selected)="selected($event)"
+							(deselected)="removed($event)"> </ng-select>
+					</div>
+					<span class="text-danger"
+						*ngIf="contactUsForm.get('state').hasError('required') && contactUsForm.get('state').touched">
+						Select state </span>
+
+
+				</div>
+				<div class="form-group">
+					<label>Inquiry*</label>
+					<textarea class="form-control" rows="5" id="inquiry"
+						formControlName="inquiry"></textarea>
+					<span class="text-danger"
+						*ngIf="contactUsForm.get('inquiry').hasError('required') && contactUsForm.get('inquiry').touched">
+						Write your comments </span> <span class="text-danger"
+						*ngIf="contactUsForm.get('inquiry').hasError('minlength')">
+						Comments should be minimum 50 letters </span> <span class="text-danger"
+						*ngIf="contactUsForm.get('inquiry').hasError('maxlength')">
+						Comments should not be more than 500 characters </span>
+				</div>
+
+				<toaster-container [toasterconfig]="config1"> </toaster-container>
+
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button type="submit" class="btn btn-default"
+				[disabled]="contactUsForm.invalid" (click)="sendContactUS()">Send</button>
+			<button type="button" class="btn btn" (click)="close()">cancel</button>
+
+		</div>
+	</div>
+</div>

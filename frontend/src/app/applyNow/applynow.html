@@ -1,0 +1,52 @@
+<div class="modal-dialog">
+  <div class="modal-content" >
+     <div class="modal-header" style="background-color: black;color: white;">
+       <span  class="close" (click)="close()" style="color:white" >&times;</span>
+       <h4 class="modal-title">Apply Now</h4>
+     </div>
+     <div class="modal-body">
+       <form [formGroup]="applyNowForm" novalidate>
+       <div class="form-group">
+         <label>Name*</label>
+         <input type="text" class="form-control" id="userName" formControlName="userName" placeholder="Enter your name">
+         <span class="text-danger" *ngIf="applyNowForm.get('userName').hasError('required') && applyNowForm.get('userName').touched">
+            Please enter your name
+        </span>
+       </div>
+        <div class="form-group">
+          <label>Email address*</label>
+          <input type="email" class="form-control" id="email" formControlName="email" aria-describedby="emailHelp" placeholder="Enter valid email address">
+
+          <span class="text-danger" *ngIf="applyNowForm.get('email').hasError('required') && applyNowForm.get('email').touched">
+             Please enter your E-mail
+         </span>
+         <span class="text-danger" *ngIf="applyNowForm.get('email').errors?.pattern">
+            Email format is invalid
+        </span>
+        </div>
+        <div class="form-group">
+          <label for="progType">Program Type*</label>
+          <select class="form-control" id="exampleSelect1" formControlName="programType">
+            <option value="Mercedes-Benz DRIVE">Mercedes-Benz DRIVE</option>
+            <option value="Mercedes-Benz DRIVE for Veterans">Mercedes-Benz DRIVE for Veterans</option>
+          </select>
+          <span class="text-danger" *ngIf="applyNowForm.get('programType').hasError('required') && applyNowForm.get('programType').touched">
+             Please enter your program type
+         </span>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Resume*</label>
+            <input type="file" class="form-control-file" id="inputFile" formControlName="file" (change)="getFiles($event)" accept="application/msword,application/pdf">
+          <span class="text-danger" *ngIf="fileSizeError">{{message}}</span>
+
+        </div>
+        <toaster-container [toasterconfig]="config1">
+      </toaster-container>
+      </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" [disabled]="applyNowForm.invalid || fileSizeError" (click)="applyNowSend()">submit</button>
+       <button type="button" class="btn btn" (click)="close()">cancel</button>
+     </div>
+  </div>
+</div>

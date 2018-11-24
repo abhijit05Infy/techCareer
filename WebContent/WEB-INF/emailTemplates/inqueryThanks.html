@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="'Tech Career inquiry from ' + ${name}"></title>
+</head>
+<body
+	style="background-image: url('http://tracking.mbusainfo.com/img/org_1200/33600/background.jpg'); background-repeat: no-repeat; background-color: #fff; background-position: center top; background-attachment: scroll">
+	<div align="center">
+		<table
+			style="background-color: #ffffff; border: none; border-collapse: collapse; border-spacing: 0; text-align: left; width: 627px;">
+			<tbody>
+				<tr>
+					<td style="width: 100%; max-width: 627px; padding: 0; margin: 0;"><img
+						src="http://tracking.mbusainfo.com/img/org_1200/33600/mb_logo.jpg"
+						alt="Mercedes-Benz USA, LLC" title="Mercedes-Benz USA, LLC"
+						style="border: 0; display: block; width: 100%; max-width: 627px;" />
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+		<table
+			style="background-color: #fff; border-collapse: collapse; border-spacing: 0; text-align: left; width: 627px;">
+			<tbody>
+				<tr>
+					<td style="font-size: 10px; width: 3%;">&nbsp;</td>
+					<td style="font-family: Arial; font-size: 14px; width: 94%;">&nbsp;</td>
+					<td style="font-size: 10px; width: 3%;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="font-size: 10px; width: 3%;">&nbsp;</td>
+					<td
+						style="font-family: Arial; font-size: 14px; color: #333; width: 94%;">
+						Thank you for contacting us. If you have any questions or need
+						more clarifications, please do not hesitate to contact us.
+					</td>
+					<td style="font-size: 10px; width: 3%;">&nbsp;</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		<table
+			style="background-color: #111111; border-collapse: collapse; border-spacing: 0; text-align: left; width: 627px;">
+			<tbody>
+				<tr>
+					<td style="font-size: 6px; width: 3%;">&nbsp;</td>
+					<td style="font-family: Arial; font-size: 6px; width: 94%;">&nbsp;</td>
+					<td style="font-size: 6px; width: 3%;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="font-size: 10px; width: 3%;">&nbsp;</td>
+					<td
+						style="font-family: Arial; font-size: 11px; color: #fff; width: 94%;">&copy;<span
+						th:text="${#dates.year(#dates.createNow())}"></span> Mercedes-Benz
+						USA, LLC
+					</td>
+					<td style="font-size: 10px; width: 3%;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="font-size: 6px; width: 3%;">&nbsp;</td>
+					<td style="font-family: Arial; font-size: 6px; width: 94%;">&nbsp;</td>
+					<td style="font-size: 6px; width: 3%;">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+{
+  "/api/**": {
+    "target": "http://localhost:9090/techcareer",
+    "secure": false,
+    "pathRewrite": {"^/api" : ""}
+  }
+}

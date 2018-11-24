@@ -1,0 +1,73 @@
+<footer class="site-footer">
+	<hr class="shadow-slider">
+	<div class="container">
+		<h2>Partnerships</h2>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12">
+				<ul class="partners">
+					<li><a class="partnership uti"
+						href="https://www.uti.edu/partners/mercedes-benz" target="_blank"></a></li>
+					<li><a class="partnership skillsusa"
+						href="http://www.skillsusa.org/" target="_blank"></a></li>
+					<li><a class="partnership calibre"
+						href="http://www.calibresys.com/" target="_blank"></a></li>
+					<li><a class="partnership gwinnett"
+						href="http://www.gwinnetttech.edu/" target="_blank"></a></li>
+					<!--<li><a class="partnership yes"
+						href="https://www.ayes.org/Home.aspx" target="_blank"></a></li>!-->
+					<li><a class="partnership ase"
+						href="https://www.ase.com/Home.aspx" target="_blank"></a></li>
+					<li><a class="partnership jefferson"
+						href="https://jefferson.kctcs.edu/" target="_blank"></a></li>
+					<li><a class="partnership jobcorps"
+						href="https://www.jobcorps.gov/" target="_blank"></a></li>
+					<li><a class="partnership techforce"
+						href="https://www.techforcefoundation.org/" target="_blank"></a></li>
+				</ul>
+			</div>
+		</div>
+		<h2>Stay in Touch</h2>
+
+		<hr>
+		<div class="row">
+			<div class="col-sm-8">
+				<label>Receive the latest news, special offers and
+					exclusives</label>
+				<form class="form-inline" [formGroup]="subscribeForm" novalidate>
+					<div class="form-group">
+						<input type="text" class="form-control" formControlName="email"
+							aria-describedby="emailHelp" placeholder="Your email address">
+					</div>
+					<button type="submit" class="btn btn-default black"
+						[disabled]="subscribeForm.invalid" (click)="subscribe()">Subscribe</button>
+				</form>
+				<span class="text-danger"
+					*ngIf="subscribeForm.get('email').errors?.pattern"> Email
+					format is invalid </span>
+			</div>
+			<div class="col-sm-4">
+				<ul>
+					<li><a class="social-icons instagram"
+						href="https://www.instagram.com/mbusa/" target="_blank"></a></li>
+					<li><a class="social-icons facebook"
+						href="https://www.facebook.com/mercedesbenzusa" target="_blank"></a></li>
+					<li><a class="social-icons twitter"
+						href="https://twitter.com/MBUSA" target="_blank"></a></li>
+					<li><a class="social-icons googleplus"
+						href="http://plus.google.com/+mbusa" target="_blank"></a></li>
+					<li><a class="social-icons youtube"
+						href="https://www.youtube.com/mbusa" target="_blank"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+		<div class="container">
+			<div class="col-sm-12">
+				<p>&copy; 2018 Mercedes-Benz USA, LLC</p>
+			</div>
+		</div>
+	</div>
+</footer>

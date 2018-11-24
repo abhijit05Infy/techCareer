@@ -1,0 +1,35 @@
+{"apps": [
+  {
+      "root": "src",
+      "outDir": "../src/main/resources/static",
+      "assets": [
+        "assets",
+        "favicon.ico",
+		    "fonts",
+		    "images"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "tsconfig": "tsconfig.json",
+      "testTsconfig": "tsconfig.json",
+      "prefix": "app",
+      "styles": [
+	    "assets/css/jasny-bootstrap.min.css",
+        "assets/css/toaster.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "collision.css"
+      ],
+      "scripts": [
+	    "assets/js/jquery.min.js",
+       "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+       "assets/js/jasny-bootstrap.min.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+]
+}

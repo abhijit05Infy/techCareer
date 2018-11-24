@@ -1,0 +1,59 @@
+	<div class="banner">
+		<div class="container">
+			<a (click)="playYoutubeVideo('fR2M1KpfcXg')"> <img
+				class="img-responsive" src="assets/images/homepage.png">
+			</a>
+			<div class="hero-copy-container">
+				<h1>Mercedes-Benz Technician Careers</h1>
+				<p>Are you ready to drive your future to the next level?</p>
+			</div>
+		</div>
+	</div>
+	<div class="container main-content">
+		<div class="row feature">
+			<div class="col-sm-6">
+				<img class="img-responsive"
+					src="assets/images/techcar-training-progams.png">
+			</div>
+			<div class="col-sm-6">
+				<h1>Technician Training Programs</h1>
+				<p>Mercedes-Benz offers state of the art technician training
+					programs located in facilities across the U.S.</p>
+				<a class="btn btn-default" routerLink="/techTrainingProg">Learn
+					More</a>
+			</div>
+		</div>
+		<hr />
+		<div class="row feature">
+			<div class="col-sm-6">
+				<img class="img-responsive" src="../../assets/images/veterans.png">
+			</div>
+			<div class="col-sm-6">
+				<h1>Veterans</h1>
+				<p>Veterans are now able to use their GI Bill benefits to attend
+					MBUSA's Technician Training Program!</p>
+				<a class="btn btn-default" href="https://mbusatechs.com" target="_blank">Learn More</a>
+			</div>
+		</div>
+		<hr />
+		<div class="row lower-features">
+			<div class="col-sm-4 col-sm-offset-2">
+				<img alt="Contact Us" class="img-responsive"
+					src="assets/images/dealership-opp.png">
+				<h2>Dealership Opportunities</h2>
+				<p>Mercedes-Benz Dealerships are always looking for highly
+					qualified individuals. Take the next step and browse open positions
+					today!</p>
+				<a class="btn btn-default" (click)="onNavigate()">Learn More</a>
+			</div>
+			<div class="col-sm-4">
+				<img alt="Replacement Parts" class="img-responsive"
+					src="assets/images/contact-us.png">
+				<h2>Contact Us</h2>
+				<p>If you have any additional questions feel free to reach out
+					to us.</p>
+				<a type="submit" class="btn btn-default"
+					(click)="showContactUsDialog()">Contact Us</a>
+			</div>
+		</div>
+	</div>

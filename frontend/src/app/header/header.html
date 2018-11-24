@@ -1,0 +1,67 @@
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<div class="navbar-brand">
+				<img alt="Mercedes-Benz" src="assets/images/MB-star-word-mark.png"
+					class="img-responsive hidden-xs hidden-sm"> <img alt="Mercedes-Benz"
+					src="assets/images/MB-std_horiz.png" class="visible-xs visible-sm">
+			</div>
+		</div>
+		<div id="navbar" class="navbar-collapse hidden-sm hidden-xs">
+			<ul class="nav navbar-nav">
+				<li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+				<div class="dropdown">
+					<li><a class="dropdown-toggle" id="dropdownMenu1"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Technician
+							Training Programs<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a pageScroll routerLink="/techTrainingProg"
+								href="#MBDrive">MB DRIVE</a></li>
+							<li><a pageScroll routerLink="/techTrainingProg"
+								href="#CollegePartnerships">College Partnerships</a></li>
+							<li><a pageScroll routerLink="/techTrainingProg"
+								href="#HighschlPartnerships">Industry Partnerships</a></li>
+						</ul></li>
+				</div>
+				<li><a href="https://mbusatechs.com" target="_blank">Veterans</a></li>
+				<li><a (click)="onNavigate();">Dealership Opportunities</a></li>
+				<li><a (click)="showContactUsDialog()">Contact Us</a></li>
+			</ul>
+		</div>
+		<nav id="myNavmenu"
+			class="navmenu navmenu-default navmenu-fixed-left offcanvas"
+			role="navigation">
+			<ul class="nav navmenu-nav">
+				<li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+
+				<li><a class="dropdown-toggle" id="dropdownMenu"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+					routerLink="/techTrainingProg">Technician Training Programs </a>
+					<ul>
+						<li><a pageScroll routerLink="/techTrainingProg"
+							href="#MBDrive">MB DRIVE</a></li>
+						<li><a pageScroll routerLink="/techTrainingProg"
+							href="#CollegePartnerships">College Partnerships</a></li>
+						<li><a pageScroll routerLink="/techTrainingProg"
+							href="#HighschlPartnerships">Industry Partnerships</a></li>
+					</ul></li>
+
+
+				<li><a routerLink="/veterans" routerLinkActive="active">Veterans</a></li>
+				<li><a (click)="onNavigate();">Dealership Opportunities</a></li>
+				<li><a (click)="showContactUsDialog()">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<button type="button" class="navbar-toggle visible-xs visible-sm"
+			data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+			<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+		</button>
+
+	</div>
+</nav>
+
+<router-outlet></router-outlet>
+<footer-template></footer-template>
